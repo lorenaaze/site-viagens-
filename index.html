@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust viagens</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!---- <img src="" alt="logo Wanderlust viagens"> -->
+            <p>Wanderlust viagens</p>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#pacotes">Pacotes</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div id="home" class="header-content">
+            <h1>Nova Zelândia</h1>
+            <p><b>Sempre teve o sonho de conhecer a Nova Zelândia? Então o momento chegou! Junte-se a nós nessa
+                    experiência.</b></p>
+            <button>Saiba mais!</button>
+        </div>
+    </header>
+
+    <section id="pacotes" class="pacotes">
+        <h1 class="pacotes-title">Conheça nossos pacotes</h1>
+
+        <div class="pacotes-cards">
+            <div class="card">
+                <div class="card-tag card-tag-top">
+                    <p>Promoção</p>
+                </div>
+
+                <div class="card-tag card-tag-bottom">
+                    <p>8x R$1.700,00</p>
+                </div>
+
+                <img class="card-image" src="assets/auckland.jfif" alt="Auckland">
+                <div class="card-content">
+                    <h1>Auckland - 7 noites</h1>
+                    <ul>
+                        <li><i data-feather="coffee"></i>Café da manhã</li>
+                        <li><i data-feather="wifi"></i>WiFi</li>
+                        <li><i data-feather="dollar-sign"></i>Desconto em passeios</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-tag card-tag-top">
+                    <p>Promoção</p>
+                </div>
+
+                <div class="card-tag card-tag-bottom">
+                    <p>6x R$1.300,00</p>
+                </div>
+
+                <img class="card-image" src="assets/wellington.jfif" alt="wellington">
+                <div class="card-content">
+                    <h1>Wellington - 5 noites</h1>
+                    <ul>
+                        <li><i data-feather="coffee"></i>Café da manhã</li>
+                        <li><i data-feather="wifi"></i>WiFi</li>
+                        <li><i data-feather="dollar-sign"></i>Desconto em passeios</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-tag card-tag-top">
+                    <p>Promoção</p>
+                </div>
+
+                <div class="card-tag card-tag-bottom">
+                    <p>10x R$1.900,00</p>
+                </div>
+
+                <img class="card-image" src="assets/queenstown.jfif" alt="Queenstown">
+                <div class="card-content">
+                    <h1>Queenstown - 7 noites</h1>
+                    <ul>
+                        <li><i data-feather="coffee"></i>Café da manhã</li>
+                        <li><i data-feather="wifi"></i>WiFi</li>
+                        <li><i data-feather="dollar-sign"></i>Desconto em passeios</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="servicos">
+        <h1 class="servicos-title">Conheça nossos serviços:</h1>
+        <div class="servicos-cards">
+            <div class="card">
+                <i data-feather="map"></i>
+                <h3>Tours guiados</h3>
+                <p>São passeios realizados com o auxílio de um guia, que nos dá informações sobre o local e nos conduz
+                    ao longo do trajeto.</p>
+                <button>Saiba mais</button>
+            </div>
+
+            <div class="card">
+                <i data-feather="camera"></i>
+                <h3>Fotografia profissional</h3>
+                <p>Nossos fotógrafos são preparados para registrar cada momento dos passeios sem que você deixe de
+                    aproveitar.</p>
+                <button>Saiba mais</button>
+            </div>
+
+            <div class="card">
+                <i data-feather="navigation"></i>
+                <h3>Aluguel de veículos</h3>
+                <p>Caso queira explorar os pontos turísticos sozinho ou sozinha, oferecemos aluguel de veículos com um
+                    desconto especial.</p>
+                <button>Saiba mais</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <div class="contato-card">
+            <h1>Entre em contato</h1>
+            <ul>
+                <li><i data-feather="map-pin"></i>Avenida República, 700</li>
+                <li><i data-feather="mail"></i>contato@wanderlustviagens.com</li>
+                <li><i data-feather="phone"></i>(+55) 11 99870-0223</li>
+            </ul>
+        </div>
+        <div id="map"></div>
+    </section>
+
+    <script>
+        feather.replace();
+
+        function initMap() {
+            const uluru = { lat: -25.344, lng: 131.036 };
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 4,
+                center: uluru,
+            });
+            const marker = new google.maps.Marker({
+                position: uluru,
+                map: map,
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap&libraries=&v=weekly" async></script>
+</body>
+
+</html>
